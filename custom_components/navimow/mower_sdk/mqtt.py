@@ -672,12 +672,7 @@ class NavimowMQTT:
             "NavimowMQTT subscribing cloud topics for %d device(s)", len(device_ids)
         )
         for device_id in device_ids:
-            result, mid = self.client.subscribe(f"/downlink/vehicle/{device_id}/realtimeDate/location")
-            _LOGGER.debug(
-                "MQTT subscribe location: result=%s mid=%s",
-                result,
-                mid,
-            )
+            self.client.subscribe(f"/downlink/vehicle/{device_id}/realtimeDate/location")
             self.client.subscribe(f"/downlink/vehicle/{device_id}/realtimeDate/state")
             self.client.subscribe(f"/downlink/vehicle/{device_id}/realtimeDate/event")
             self.client.subscribe(
