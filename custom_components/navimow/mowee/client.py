@@ -6,9 +6,9 @@
 import asyncio
 from typing import Any, Callable, TYPE_CHECKING
 
-from mowee.api import MowerAPI
-from mowee.models import Device, DeviceStatus, MowerCommand
-from mowee.mqtt import MowerMQTT
+from .api import MowerAPI
+from .models import Device, DeviceStatus, MowerCommand
+from .mqtt import MowerMQTT
 
 if TYPE_CHECKING:
     import aiohttp

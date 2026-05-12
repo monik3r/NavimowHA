@@ -7,13 +7,13 @@ import json
 import logging
 from typing import Any
 
-from mowee.event import DataEvent
-from mowee.models import (
+from .event import DataEvent
+from .models import (
     DeviceAttributesMessage,
     DeviceEventMessage,
     DeviceStateMessage,
 )
-from mowee.mqtt import NavimowMQTT
+from .mqtt import NavimowMQTT
 
 _LOGGER = logging.getLogger(__name__)
 

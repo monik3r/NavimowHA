@@ -9,8 +9,8 @@ from typing import Any
 
 import aiohttp
 
-from mowee.errors import MowerAPIError, ERROR_MESSAGES
-from mowee.models import Device, DeviceStatus, MowerCommand
+from .errors import MowerAPIError, ERROR_MESSAGES
+from .models import Device, DeviceStatus, MowerCommand
 import logging
 logger = logging.getLogger(__name__)
 

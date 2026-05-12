@@ -3,19 +3,19 @@
 提供与云端割草机平台交互的功能，包括 REST API 和 MQTT 支持。
 """
 
-from mowee.api import MowerAPI
-from mowee.client import MowerClient
-from mowee.cloud import NavimowCloud
-from mowee.device import NavimowCloudDevice
-from mowee.event import DataEvent
-from mowee.errors import (
+from .api import MowerAPI
+from .client import MowerClient
+from .cloud import NavimowCloud
+from .device import NavimowCloudDevice
+from .event import DataEvent
+from .errors import (
     MowerAPIError,
     MowerAuthError,
     MowerMQTTError,
     ERROR_MESSAGES,
     COMMAND_ERRORS,
 )
-from mowee.models import (
+from .models import (
     Device,
     DeviceAttributesMessage,
     DeviceCommandMessage,
@@ -29,10 +29,10 @@ from mowee.models import (
     ThingPropertiesMessage,
     ThingStatusMessage,
 )
-from mowee.mqtt import MowerMQTT, NavimowMQTT
-from mowee.navimow import Navimow
-from mowee.sdk import NavimowSDK
-from mowee.state_manager import StateManager
+from .mqtt import MowerMQTT, NavimowMQTT
+from .navimow import Navimow
+from .sdk import NavimowSDK
+from .state_manager import StateManager
 
 __version__ = "0.1.0"
 

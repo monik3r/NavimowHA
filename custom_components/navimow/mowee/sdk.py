@@ -9,13 +9,13 @@ import uuid
 from collections.abc import Callable
 from typing import Any
 
-from mowee.models import (
+from .models import (
     DeviceAttributesMessage,
     DeviceCommandMessage,
     DeviceEventMessage,
     DeviceStateMessage,
 )
-from mowee.mqtt import NavimowMQTT
+from .mqtt import NavimowMQTT
 
 _LOGGER = logging.getLogger(__name__)
 

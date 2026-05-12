@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
-from mowee.event import DataEvent
-from mowee.models import (
+from .event import DataEvent
+from .models import (
     Device,
     DeviceAttributesMessage,
     DeviceEventMessage,

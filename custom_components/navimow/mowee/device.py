@@ -4,14 +4,14 @@ from __future__ import annotations
 
 from collections.abc import Awaitable, Callable
 
-from mowee.cloud import NavimowCloud
-from mowee.models import (
+from .cloud import NavimowCloud
+from .models import (
     Device,
     DeviceAttributesMessage,
     DeviceEventMessage,
     DeviceStateMessage,
 )
-from mowee.state_manager import StateManager
+from .state_manager import StateManager
 
 
 class NavimowCloudDevice:
