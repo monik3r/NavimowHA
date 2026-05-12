@@ -2,8 +2,8 @@
 
 from __future__ import annotations
 
-from mower_sdk.event import DataEvent
-from mower_sdk.models import (
+from mowee.event import DataEvent
+from mowee.models import (
     Device,
     DeviceAttributesMessage,
     DeviceEventMessage,

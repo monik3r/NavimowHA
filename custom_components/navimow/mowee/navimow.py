@@ -5,11 +5,11 @@ from __future__ import annotations
 import asyncio
 from collections.abc import Callable
 
-from mower_sdk.cloud import NavimowCloud
-from mower_sdk.device import NavimowCloudDevice
-from mower_sdk.models import Device
-from mower_sdk.mqtt import NavimowMQTT
-from mower_sdk.state_manager import StateManager
+from mowee.cloud import NavimowCloud
+from mowee.device import NavimowCloudDevice
+from mowee.models import Device
+from mowee.mqtt import NavimowMQTT
+from mowee.state_manager import StateManager
 
 
 class NavimowDeviceManager:

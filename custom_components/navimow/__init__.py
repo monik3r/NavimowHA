@@ -51,10 +51,10 @@ async def async_setup(hass: HomeAssistant, config: dict[str, Any]) -> bool:
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Set up Navimow from a config entry."""
-    # 延迟导入 mower_sdk，避免在加载 config_flow 时触发依赖导入
-    from mower_sdk.api import MowerAPI
-    from mower_sdk.errors import MowerAPIError
-    from mower_sdk.sdk import NavimowSDK
+    # 延迟导入 mowee，避免在加载 config_flow 时触发依赖导入
+    from mowee.api import MowerAPI
+    from mowee.errors import MowerAPIError
+    from mowee.sdk import NavimowSDK
     
     from .coordinator import NavimowCoordinator
     

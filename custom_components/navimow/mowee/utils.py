@@ -9,7 +9,7 @@ from datetime import datetime
 from typing import Any
 
 
-def setup_logger(name: str = "mower_sdk", level: int = logging.INFO) -> logging.Logger:
+def setup_logger(name: str = "mowee", level: int = logging.INFO) -> logging.Logger:
     """设置并返回日志记录器。
 
     Args:

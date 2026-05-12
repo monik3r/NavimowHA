@@ -13,9 +13,9 @@ from typing import Any
 
 from paho.mqtt import client as mqtt_client
 
-from mower_sdk.errors import MowerMQTTError, ERROR_MESSAGES
-from mower_sdk.models import Device, DeviceStatus
-from mower_sdk.utils import parse_json
+from mowee.errors import MowerMQTTError, ERROR_MESSAGES
+from mowee.models import Device, DeviceStatus
+from mowee.utils import parse_json
 
 _LOGGER = logging.getLogger(__name__)
 
