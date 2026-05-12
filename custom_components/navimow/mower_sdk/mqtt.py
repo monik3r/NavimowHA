@@ -315,8 +315,8 @@ class MowerMQTT:
                 )
                 _client.subscribe(status_topic)
                 _client.subscribe(event_topic)
-                _client.subscribe(attributes_topic)
                 _client.subscribe(location_topic)
+                _client.subscribe(attributes_topic)
 
             def on_message(_client, _userdata, msg) -> None:
                 try:
@@ -665,6 +665,7 @@ class NavimowMQTT:
             self.client.subscribe("/downlink/vehicle/+/realtimeDate/state")
             self.client.subscribe("/downlink/vehicle/+/realtimeDate/event")
             self.client.subscribe("/downlink/vehicle/+/realtimeDate/attributes")
+            self.client.subscribe("/downlink/vehicle/+/realtimeDate/location")
             return
 
         _LOGGER.info(
@@ -676,6 +677,7 @@ class NavimowMQTT:
             self.client.subscribe(
                 f"/downlink/vehicle/{device_id}/realtimeDate/attributes"
             )
+            self.client.subscribe(f"/downlink/vehicle/{device_id}/realtimeDate/location")
 
     def unsubscribe_all(self, product_key: str, device_name: str) -> None:
         device_ids = self._get_device_ids()
@@ -684,6 +686,7 @@ class NavimowMQTT:
             self.client.unsubscribe("/downlink/vehicle/+/realtimeDate/state")
             self.client.unsubscribe("/downlink/vehicle/+/realtimeDate/event")
             self.client.unsubscribe("/downlink/vehicle/+/realtimeDate/attributes")
+            self.client.unsubscribe("/downlink/vehicle/+/realtimeDate/location")
             return
 
         _LOGGER.info(
@@ -695,6 +698,7 @@ class NavimowMQTT:
             self.client.unsubscribe(
                 f"/downlink/vehicle/{device_id}/realtimeDate/attributes"
             )
+            self.client.unsubscribe(f"/downlink/vehicle/{device_id}/realtimeDate/location")
 
     def _schedule(self, coro: Awaitable[None]) -> None:
         if self.loop and self.loop.is_running():
