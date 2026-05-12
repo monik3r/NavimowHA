@@ -183,6 +183,10 @@ class NavimowCoordinator(DataUpdateCoordinator[dict[str, Any]]):
             self._last_http_fetch,
         )
         self.data = self._build_data()
+        _LOGGER.debug(
+            "Coordinator data: %s",
+            self.data
+        )
         return self.data
 
     def _handle_state(self, state: DeviceStateMessage) -> None:
