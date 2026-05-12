@@ -9,14 +9,14 @@ from homeassistant.exceptions import ConfigEntryAuthFailed
 from homeassistant.helpers import config_entry_oauth2_flow
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
 
-from mowee.api import MowerAPI
-from mowee.models import (
+from .mowee.api import MowerAPI
+from .mowee.models import (
     Device,
     DeviceAttributesMessage,
     DeviceStateMessage,
     DeviceStatus,
 )
-from mowee.sdk import NavimowSDK
+from .mowee.sdk import NavimowSDK
 
 from .const import (
     DOMAIN,
