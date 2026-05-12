@@ -672,12 +672,12 @@ class NavimowMQTT:
             "NavimowMQTT subscribing cloud topics for %d device(s)", len(device_ids)
         )
         for device_id in device_ids:
+            self.client.subscribe(f"/downlink/vehicle/{device_id}/realtimeDate/location")
             self.client.subscribe(f"/downlink/vehicle/{device_id}/realtimeDate/state")
             self.client.subscribe(f"/downlink/vehicle/{device_id}/realtimeDate/event")
             self.client.subscribe(
                 f"/downlink/vehicle/{device_id}/realtimeDate/attributes"
             )
-            self.client.subscribe(f"/downlink/vehicle/{device_id}/realtimeDate/location")
 
     def unsubscribe_all(self, product_key: str, device_name: str) -> None:
         device_ids = self._get_device_ids()
