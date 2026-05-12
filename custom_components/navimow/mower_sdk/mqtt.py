@@ -674,8 +674,7 @@ class NavimowMQTT:
         for device_id in device_ids:
             result, mid = self.client.subscribe(f"/downlink/vehicle/{device_id}/realtimeDate/location")
             _LOGGER.debug(
-                "MQTT subscribe location: topic=%s result=%s mid=%s",
-                topic,
+                "MQTT subscribe location: result=%s mid=%s",
                 result,
                 mid,
             )
